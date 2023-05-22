@@ -3,7 +3,7 @@
 #include <string>
 
 namespace UtilCore {
-std::string kValidAlphabetChars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+extern kValidAlphabetChars;
 
 void purge_special(std::string &str);
 void tolower(std::string &str);
