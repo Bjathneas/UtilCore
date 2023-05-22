@@ -3,7 +3,7 @@
 #include <string>
 
 namespace UtilCore {
-extern kValidAlphabetChars;
+extern std::string kValidAlphabetChars;
 
 void purge_special(std::string &str);
 void tolower(std::string &str);
