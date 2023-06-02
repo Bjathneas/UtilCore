@@ -1,6 +1,7 @@
 #include "UtilCore/strings.h"
 
 #include <algorithm>
+#include <sstream>
 
 namespace UtilCore {
 std::string kValidAlphabetChars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -22,5 +23,17 @@ void toupper(std::string& str)
     for (char& c : str) {
         c = std::toupper(c);
     }
+}
+std::vector<std::string> split(std::string str)
+{
+    std::vector<std::string> split_vec;
+    std::stringstream ss(str);
+
+    std::string str_split;
+
+    while (ss >> str_split) {
+        split_vec.push_back(str_split);
+    }
+    return split_vec;
 }
 }
